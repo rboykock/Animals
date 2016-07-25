@@ -8,34 +8,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/layout_bottom_margin">
+        android:layout_marginBottom="@dimen/linear_margin_bottom">
         <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
         android:id="@+id/bear"
         android:src="@drawable/bear"
-        android:layout_marginRight="@dimen/layout_right_margin"
+        android:layout_marginRight="@dimen/image_margin_right"
         android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/cat"
             android:src="@drawable/cat"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/chiken"
             android:src="@drawable/chiken"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/cow"
             android:src="@drawable/cow"
             android:background="@drawable/bg"/>
@@ -45,34 +45,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/layout_bottom_margin">
+        android:layout_marginBottom="@dimen/linear_margin_bottom">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/dog"
             android:src="@drawable/dog"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/elephant"
             android:src="@drawable/elephant"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/snake"
             android:src="@drawable/snake"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/giraffe"
             android:src="@drawable/giraffe"
             android:background="@drawable/bg"/>
@@ -82,34 +82,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/layout_bottom_margin">
+        android:layout_marginBottom="@dimen/linear_margin_bottom">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/hippo"
             android:src="@drawable/hippo"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/monkey"
             android:src="@drawable/monkey"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/panda"
             android:src="@drawable/panda"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/parrot"
             android:src="@drawable/parrot"
             android:background="@drawable/bg"/>
@@ -119,34 +119,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/layout_bottom_margin">
+        android:layout_marginBottom="@dimen/linear_margin_bottom">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/penguin"
             android:src="@drawable/penguin"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/pig"
             android:src="@drawable/pig"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/rabbit"
             android:src="@drawable/rabbit"
-            android:layout_marginRight="@dimen/layout_right_margin"
+            android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
             android:id="@+id/sheep"
             android:src="@drawable/sheep"
             android:background="@drawable/bg"/>
