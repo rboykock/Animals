@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_vertical"
-    android:background="@drawable/stock_vector_cute_animals">
+    android:background="@drawable/kid_backgrounds"
+    android:scaleType="centerCrop">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
