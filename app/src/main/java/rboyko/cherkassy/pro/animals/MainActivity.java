@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         imagesView[14]=(ImageView)findViewById(R.id.rabbit);
         imagesView[15]=(ImageView)findViewById(R.id.sheep);
 
-        LoadManager.loadSounds(this);
 
         AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         curVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
@@ -67,44 +66,37 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
     public void onClick(View v) {
         int playSound=0;
         switch (v.getId()){
-            case R.id.bear: Log.v("MyDEBUG","bear");
-                            playSound=LoadManager.getClip(0);
+            case R.id.bear: playSound=LoadManager.getClip(0);
                             break;
-            case R.id.cat: Log.v("MyDEBUG","cat");
-                            playSound=LoadManager.getClip(1);
+            case R.id.cat:  playSound=LoadManager.getClip(1);
                             break;
-            case R.id.chiken: Log.v("MyDEBUG","chiken");
-                                playSound=LoadManager.getClip(6);
+            case R.id.chiken:   playSound=LoadManager.getClip(6);
                                 break;
-            case R.id.cow: Log.v("MyDEBUG","cow");
-                            playSound=LoadManager.getClip(2);
+            case R.id.cow:  playSound=LoadManager.getClip(2);
                             break;
-            case R.id.dog: Log.v("MyDEBUG","dog");
-                            playSound=LoadManager.getClip(3);
+            case R.id.dog:  playSound=LoadManager.getClip(3);
                             break;
-            case R.id.elephant: Log.v("MyDEBUG","elephant");
+            case R.id.elephant: playSound=LoadManager.getClip(8);
                                 break;
-            case R.id.snake: Log.v("MyDEBUG","snak");
+            case R.id.snake:    playSound=LoadManager.getClip(12);
                                 break;
-            case R.id.giraffe: Log.v("MyDEBUG","giraffe");
+            case R.id.giraffe:  playSound=LoadManager.getClip(9);
                                 break;
-            case R.id.hippo: Log.v("MyDEBUG","hippo");
-                            break;
-            case R.id.monkey: Log.v("MyDEBUG","monkey");
+            case R.id.hippo: playSound=LoadManager.getClip(13);
                              break;
-            case R.id.panda: Log.v("MyDEBUG","panda");
-                            break;
-            case R.id.parrot: Log.v("MyDEBUG","parrot");
-                            break;
-            case R.id.penguin: Log.v("MyDEBUG","penguin");
-                            break;
-            case R.id.pig: Log.v("MyDEBUG","pig");
-                            playSound=LoadManager.getClip(5);
+            case R.id.monkey: playSound=LoadManager.getClip(14);
+                              break;
+            case R.id.panda: playSound=LoadManager.getClip(15);
+                             break;
+            case R.id.parrot: playSound=LoadManager.getClip(10);
+                              break;
+            case R.id.penguin: playSound=LoadManager.getClip(11);
+                              break;
+            case R.id.pig: playSound=LoadManager.getClip(5);
                             break;
             case R.id.rabbit: Log.v("MyDEBUG","rabbit");
                             break;
-            case R.id.sheep: Log.v("MyDEBUG","sheep");
-                            playSound=LoadManager.getClip(7);
+            case R.id.sheep: playSound=LoadManager.getClip(7);
                             break;
 
         }

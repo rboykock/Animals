@@ -7,9 +7,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import rboyko.cherkassy.pro.animals.manager.LoadManager;
+
 public class SplashScreen extends AppCompatActivity {
 
-    public static final int TIMESLEEP=14;
+    public static final int TIMESLEEP=5;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,7 @@ public class SplashScreen extends AppCompatActivity {
                     sleep(SplashScreen.TIMESLEEP * 1000);
 
                     Intent i = new Intent(getBaseContext(), MainActivity.class);
+                    LoadManager.loadSounds(getBaseContext());
                     startActivity(i);
 
                     finish();

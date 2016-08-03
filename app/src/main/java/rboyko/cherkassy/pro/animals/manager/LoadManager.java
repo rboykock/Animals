@@ -11,7 +11,7 @@ import rboyko.cherkassy.pro.animals.R;
  * Created by rost on 08.07.2016.
  */
 public class LoadManager {
-    static  int[] soundId=new int[8];
+    static  int[] soundId=new int[16];
     static SoundPool soundPool=null;
 
     public static void loadSounds(Context c){
@@ -24,6 +24,14 @@ public class LoadManager {
         soundId[5]=soundPool.load(c,R.raw.pigs,1);
         soundId[6]=soundPool.load(c,R.raw.rooster,1);
         soundId[7]=soundPool.load(c,R.raw.sheep,1);
+        soundId[8]=soundPool.load(c,R.raw.elephant,1);
+        soundId[9]=soundPool.load(c,R.raw.giraffe,1);
+        soundId[10]=soundPool.load(c,R.raw.parrot,1);
+        soundId[11]=soundPool.load(c,R.raw.penguin,1);
+        soundId[12]=soundPool.load(c,R.raw.snake,1);
+        soundId[13]=soundPool.load(c,R.raw.hippo,1);
+        soundId[14]=soundPool.load(c,R.raw.monkey,1);
+        soundId[15]=soundPool.load(c,R.raw.panda,1);
 
     }
 
