@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import rboyko.cherkassy.pro.animals.manager.LoadManager;
@@ -13,6 +14,7 @@ import rboyko.cherkassy.pro.animals.manager.LoadManager;
 public class SplashScreen extends AppCompatActivity {
 
     public static final int TIMESLEEP=5;
+    private ProgressBar progressBar;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,23 +42,32 @@ public class SplashScreen extends AppCompatActivity {
         Typeface font=Typeface.createFromAsset(getAssets(),"fonts/9974.ttf");
         app_title_view.setTypeface(font);
 
+        progressBar=(ProgressBar)findViewById(R.id.splashScreenProgressBar);
+
         Thread trThread=new Thread() {
             public void run() {
-                try {
-                    sleep(SplashScreen.TIMESLEEP * 1000);
-
-                    Intent i = new Intent(getBaseContext(), MainActivity.class);
+                    runProgress();
                     LoadManager.loadSounds(getBaseContext());
-                    startActivity(i);
-
+                    runMainActivity();
                     finish();
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
             }
         };
         trThread.start();
+    }
+
+    protected void runProgress(){
+        for(int progress=0;progress<=100;progress+=10){
+            try {
+                progressBar.setProgress(progress);
+                Thread.sleep(SplashScreen.TIMESLEEP * 100);
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    protected void runMainActivity(){
+        Intent i = new Intent(getBaseContext(), MainActivity.class);
+        startActivity(i);
     }
 }
