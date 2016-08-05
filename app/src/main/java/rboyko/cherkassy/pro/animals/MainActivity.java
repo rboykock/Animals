@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.LinearLayout;
 
 import rboyko.cherkassy.pro.animals.manager.LoadManager;
 
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         imagesView[11]=(ImageView)findViewById(R.id.parrot);
         imagesView[12]=(ImageView)findViewById(R.id.penguin);
         imagesView[13]=(ImageView)findViewById(R.id.pig);
-        imagesView[14]=(ImageView)findViewById(R.id.rabbit);
+        imagesView[14]=(ImageView)findViewById(R.id.lion);
         imagesView[15]=(ImageView)findViewById(R.id.sheep);
 
 
@@ -74,7 +75,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
             view.setOnClickListener(this);
         }
 
+
+
     }
+
+
 
     protected void onDestroy() {
         super.onDestroy();
@@ -113,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                               break;
             case R.id.pig: playSound=LoadManager.getClip(5);
                             break;
-            case R.id.rabbit: Log.v("MyDEBUG","rabbit");
+            case R.id.lion: playSound=LoadManager.getClip(16);
                             break;
             case R.id.sheep: playSound=LoadManager.getClip(7);
                             break;

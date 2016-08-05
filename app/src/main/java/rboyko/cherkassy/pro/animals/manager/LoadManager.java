@@ -1,8 +1,10 @@
 package rboyko.cherkassy.pro.animals.manager;
 
 import android.content.Context;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Build;
 import android.provider.ContactsContract;
 
 import rboyko.cherkassy.pro.animals.R;
@@ -11,11 +13,19 @@ import rboyko.cherkassy.pro.animals.R;
  * Created by rost on 08.07.2016.
  */
 public class LoadManager {
-    static  int[] soundId=new int[16];
+    static  int[] soundId=new int[17];
     static SoundPool soundPool=null;
 
     public static void loadSounds(Context c){
-        soundPool=new SoundPool(1, AudioManager.STREAM_MUSIC,0);
+        if(Build.VERSION.SDK_INT<21) {
+            soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        }else{
+            AudioAttributes attributes = new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_GAME)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .build();
+            soundPool=new SoundPool.Builder().setAudioAttributes(attributes).build();
+        }
         soundId[0]=soundPool.load(c,R.raw.bear,1);
         soundId[1]=soundPool.load(c,R.raw.cat,1);
         soundId[2]=soundPool.load(c,R.raw.cow,1);
@@ -32,7 +42,7 @@ public class LoadManager {
         soundId[13]=soundPool.load(c,R.raw.hippo,1);
         soundId[14]=soundPool.load(c,R.raw.monkey,1);
         soundId[15]=soundPool.load(c,R.raw.panda,1);
-
+        soundId[16]=soundPool.load(c,R.raw.lion,1);
     }
 
     public static int getClip(int i){

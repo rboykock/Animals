@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:gravity="center_vertical"
     android:background="@drawable/kid_backgrounds"
-    android:scaleType="centerCrop">
+    android:scaleType="centerCrop"
+    android:id="@+id/root_linear_layout">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -141,8 +142,8 @@
         <ImageView
             android:layout_width="@dimen/image_width"
             android:layout_height="@dimen/image_height"
-            android:id="@+id/rabbit"
-            android:src="@drawable/rabbit"
+            android:id="@+id/lion"
+            android:src="@drawable/lion"
             android:layout_marginRight="@dimen/image_margin_right"
             android:background="@drawable/bg"/>
 
