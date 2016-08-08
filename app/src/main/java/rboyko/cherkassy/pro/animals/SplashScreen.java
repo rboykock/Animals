@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import rboyko.cherkassy.pro.animals.manager.LoadManager;
 
 public class SplashScreen extends AppCompatActivity {
@@ -43,6 +46,10 @@ public class SplashScreen extends AppCompatActivity {
         app_title_view.setTypeface(font);
 
         progressBar=(ProgressBar)findViewById(R.id.splashScreenProgressBar);
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Thread trThread=new Thread() {
             public void run() {
