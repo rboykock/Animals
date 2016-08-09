@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
     protected int priority = 1;
     protected int no_loop = 0;
     protected float normal_playback_rate = 1f;
+    protected int activityProgress=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,5 +128,33 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         }
         SoundPool soundPool=LoadManager.getSoundPool();
         int mStreamId=soundPool.play(playSound, leftVolume, rightVolume, priority, no_loop, normal_playback_rate);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        activityProgress++;
+        Log.v("activityProgress", String.valueOf(activityProgress));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        activityProgress++;
+        Log.v("activityProgress", String.valueOf(activityProgress));
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        activityProgress++;
+        Log.v("activityProgress", String.valueOf(activityProgress));
+        if(activityProgress==3){
+            Log.v("activityProgress","Start SplashScreen");
+            activityProgress=0;
+        }else{
+            activityProgress=0;
+        }
     }
 }
