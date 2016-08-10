@@ -134,15 +134,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
     protected void onRestart() {
         super.onRestart();
         activityProgress++;
-        Log.v("activityProgress", String.valueOf(activityProgress));
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         activityProgress++;
-        Log.v("activityProgress", String.valueOf(activityProgress));
-
     }
 
     @Override
@@ -151,7 +148,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         activityProgress++;
         Log.v("activityProgress", String.valueOf(activityProgress));
         if(activityProgress==3){
-            Log.v("activityProgress","Start SplashScreen");
+            Intent i = new Intent(getBaseContext(), SplashScreen.class);
+            startActivity(i);
+            finish();
             activityProgress=0;
         }else{
             activityProgress=0;
