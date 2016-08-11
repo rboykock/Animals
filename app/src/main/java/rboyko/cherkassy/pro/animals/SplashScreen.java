@@ -4,20 +4,28 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.provider.Settings.Secure;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.content.Context;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import rboyko.cherkassy.pro.animals.manager.LoadManager;
 
+import static java.security.AccessController.getContext;
+
 public class SplashScreen extends AppCompatActivity {
 
     public static final int TIMESLEEP=5;
     private ProgressBar progressBar;
+    protected Thread trThread;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +53,12 @@ public class SplashScreen extends AppCompatActivity {
 
         progressBar=(ProgressBar)findViewById(R.id.splashScreenProgressBar);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
-        Thread trThread=new Thread() {
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("C57337B147C477679ED7A32292D89997").build();
+
+
+        trThread=new Thread() {
             public void run() {
                     runProgress();
                     LoadManager.loadSounds(getBaseContext());
@@ -57,7 +66,20 @@ public class SplashScreen extends AppCompatActivity {
                     finish();
             }
         };
-        trThread.start();
+
+        mAdView.setAdListener(new AdListener() {
+
+            public void onAdLoaded(){
+                trThread.start();
+            }
+
+
+            public void onAdFailedToLoad(int i) {
+                trThread.start();
+            }
+        });
+
+        mAdView.loadAd(adRequest);
     }
 
     protected void runProgress(){
