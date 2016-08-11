@@ -23,7 +23,7 @@ import static java.security.AccessController.getContext;
 
 public class SplashScreen extends AppCompatActivity {
 
-    public static final int TIMESLEEP=5;
+    public static final int TIMESLEEP=6;
     private ProgressBar progressBar;
     protected Thread trThread;
 
@@ -55,7 +55,7 @@ public class SplashScreen extends AppCompatActivity {
 
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("C57337B147C477679ED7A32292D89997").build();
+        AdRequest adRequest = new AdRequest.Builder().build();
 
 
         trThread=new Thread() {
